@@ -88,6 +88,7 @@ module.exports.SubscribeMessage = async (channel, service) => {
         service.SubscribeEvents(msg.content.toString());
       }
       console.log("Broker response is received. ");
+      console.log("Smth is comming. CC")
     },
     {
       noAck: true,
