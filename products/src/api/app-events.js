@@ -1,8 +1,17 @@
-module.exports = (app) => {
-  app.use("/app-events", (req, res, next) => {
-    const { payload } = req.body;
+// const ShoppingService = require("../services/shopping-service");
 
-    console.log("============ Product Service Recieved Event ===========");
-    return res.status(200).json(payload);
-  });
-};
+module.exports = (app) => {
+    
+    // const service = new ShoppingService();
+    app.use('/app-events',async (req,res,next) => {
+
+        const { payload } = req.body;
+
+        console.log("============= Shopping ================");
+        console.log(payload);
+
+        return res.status(200).json({ message: 'notified!'});
+ 
+    });
+
+}

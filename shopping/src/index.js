@@ -12,12 +12,13 @@ const StartServer = async() => {
     await expressApp(app);
 
     app.listen(PORT, () => {
-        console.log(`Shopping: listening to port ${PORT}`);
+        console.log(`listening to port ${PORT}`);
     })
     .on('error', (err) => {
         console.log(err);
         process.exit();
     })
+
 }
 
 StartServer();
